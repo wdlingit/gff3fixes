@@ -2,7 +2,7 @@
 
 Collection of notes on *may-be-incorrectness* and *fixes* of GFF3 files.
 
-## 1. Different CDS or exon record with the same ID
+## 1. Different CDS or exon records with the same ID
 
 Usually seen in GFF3 downloaded from Ensembl and NCBI.
 
