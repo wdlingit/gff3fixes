@@ -2,6 +2,16 @@
 
 Collection of notes on *may-be-incorrectness* and *fixes* of GFF3 files.
 
+Currently I have a number of tools for checking/fixing GFF3 files:
+1. misc.GffTree (java): Parse a GFF3 file and report its feature hierarchy. Detects records with duplicated IDs and records with non-available parents.
+2. misc.CanonicalGFF (java): Reads a GFF3 and report gene regions and exon regions (by merging all gene models). The gene region part would reflect gene records in the GFF3 file.
+3. misc.ModelCGFF (java): Read a GFF3 and report (i) gene regions and exon regions (by merging all gene models) in a CGFF file, and (ii) model regions and exon regions in a model file. The gene region part would be concluded from corresponding exon regions.
+4. GFF3checker.pl: multi-function script: (i) check redundancy (overlapping gene records) (ii) sort GFF3 (iii) remove/extract records fron the GFF3 object hierarchy (iv) merge records for duplicated gene annotations (v) check whether exons expand the gene region correctly
+5. GFFExtractor.pl: extract specified records of specified features
+6. cgff2GFF3.pl and model2GFF3.pl: transform a CGFF or model file into GFF3
+
+Commonly seen fix operations would be listed in this page. Fixes of complex examples would be written in separate pages.
+
 ## 1. Different CDS or exon records with the same ID
 
 Usually seen in GFF3 downloaded from Ensembl and NCBI.
